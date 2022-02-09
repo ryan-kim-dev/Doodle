@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><span id="number">1</span>번째 참가자</h1>
+    <div>제시어: <span id="word"></span></div>
+    <input type="text" />
+    <button>입력</button>
+    <script>
+      const $input = document.querySelector('input');
+      const $button = document.querySelector('button');
+
+      const onClickButton = (event) => {
+        if (event.target) {
+          console.log('버튼 클릭');
+        }
+      };
+      const onInput = (event) => {
+        console.log(event.target.value);
+      };
+      $button.addEventListener('click', onClickButton);
+      $input.addEventListener('input', onInput);
+    </script>
+  </body>
+</html>
