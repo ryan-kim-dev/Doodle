@@ -9,8 +9,11 @@
   <body>
     <script>
       const hof = (a) => {
+        // 여기서부터 first의 return값
         return (b) => {
+          // 여기서부터 second의 return값
           return (c) => {
+            //여기서부터 third의 return값
             return a + b * c;
           };
         };
