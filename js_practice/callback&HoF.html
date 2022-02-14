@@ -11,9 +11,11 @@
     <p><span id="number">1</span>번째 참가자</p>
     <input type="text" />
     <button id="button1">입력</button>
+    <input type="text" placeholder="부호 입력(고차함수 연습용)" id="operator" />
     <script>
       const $input = document.querySelector('input');
       const $button1 = document.querySelector('#button1');
+      const $input2 = document.querySelector('#operator');
 
       // 콜백함수 - 함수에 파라미터로 들어가는 함수. 순차적으로 함수를 실행하기 위해 사용.
       $input.addEventListener('input', function () {
@@ -24,7 +26,7 @@
         $input.focus(); // input창 강조효과
       });
 
-      // 고차함수 만들기
+      // 고차함수 만들기 - 함수가 함수를 반환
       function first(고차함수) {
         고차함수();
       }
@@ -46,6 +48,13 @@
       1
       2
       */
+
+      // 콜백함수 심화 1 - 이벤트리스너 함수자리에 함수 넣기
+      const onInputOperator = () => {
+        confirm($input2.value);
+      };
+
+      $input2.addEventListener('input', onInputOperator);
     </script>
   </body>
 </html>
