@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열과 반복문을 사용하여 무작위로 숫자 카드 뽑기</title>
+  </head>
+  <body>
+    <p>1부터 7까지의 숫자 카드가 있을 때 무작위로 3장을 뽑는다.</p>
+    <!-- <div>뽑을 수 있는 카드</div>
+    <input type="text" id="numbers" readonly />
+    <button id="number1">보기</button>
+    <div>실제로 뽑은 카드</div>
+    <input type="text" id="answer" readonly />
+    <button id="answer1">보기</button> -->
+    <script>
+      //   const $numbers = document.querySelector('#numbers');
+      //   const $answer = document.querySelector('#answer');
+      //   const $number1 = document.querySelector('#number1');
+      //   const $answer1 = document.querySelector('#answer1');
+
+      const numbers = [];
+      for (i = 0; i < 7; i++) {
+        numbers.push(i + 1);
+      }
+
+      const answer = [];
+      for (i = 0; i < 3; i++) {
+        index = Math.floor(Math.random() * numbers.length);
+        answer.push(index + 1);
+        numbers.splice(index, 1);
+      }
+      console.log(numbers);
+      console.log(answer);
+      //   $number1.addEventListener('choice', () => {
+      //     $numbers.value = numbers.toString();
+      //   });
+      //   $answer1.addEventListener('select', () => {
+      //     $answer.value = answer.toString();
+      //   });
+    </script>
+  </body>
+</html>
