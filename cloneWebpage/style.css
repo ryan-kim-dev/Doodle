@@ -1,0 +1,92 @@
+/* 구글 폰트 미적용, 자체 폰트 적용시 @font-face 사용하기*/
+@font-face {
+  font-family: abster;
+  src: url(font/abster-webfont.woff) format('woff');
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* height에는 %로 적용 불가, 따라서 뷰포트 단위로 vh(view height)로 지정함 */
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(images/room.jpg);
+  /* 그라디언트는 색을 섞는 개념이므로 rgba값을 두개 이상 주어 섞는다. 뒤에 url함수로 백그라운드 이미지 경로 기입함. */
+}
+
+.container .header {
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  /* 마진값을 0 auto로 주어(좌우 마진 0) 해당 요소가 항상 수평기준 중앙에 오게 함 */
+  display: flex;
+  /* 정렬방식:flex */
+  justify-content: space-between;
+  /* space-between: 요소가 항상 좌우 끝으로 붙어서 출력되게 */
+  align-items: center;
+  /* nav 메뉴들이 위로 붙어있어서 .header의 80px 내에서 수직 기준 중앙으로 정렬함. */
+}
+
+.container .header h1 a {
+  text-decoration: none;
+  color: white;
+  font-family: abster;
+}
+
+.container .nav ul li {
+  display: inline-block;
+  /* inline-block으로 list item들을 가로로 정렬 */
+  margin: 0 10px;
+  /* 요소간 좌우 마진 10px씩 적용 */
+}
+
+.container .nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.container .nav ul li a:hover {
+  /* css 의사 클래스(:)는 사용자가 포인팅하여 상호작용 중인 요소를 선택 */
+  color: #1fdfdf;
+}
+
+.container .hero {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* 화면 정중앙으로 이동시킴 */
+  color: white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .hero h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.container .hero p {
+  font-size: 22px;
+}
+
+.container .hero button {
+  background: none;
+  border: solid darkseagreen;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+  outline: none;
+  cursor: pointer;
+  /* 버튼 접근시 커서가 손가락 모양으로 변하게 */
+  transition: all 0.4s;
+}
+
+.container .hero button:hover {
+  background-color: darkslategray;
+}
