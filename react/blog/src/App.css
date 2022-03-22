@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.App {
+  text-align: center;
+}
+
+.nav-bar {
+  text-align: left;
+  padding: 15px;
+  background-color: lightskyblue;
+}
+
+.nav-bar a {
+  color: white;
+}
+
+.post-item {
+  text-align: left;
+  margin-top: 5px;
+  padding-left: 15px;
+  border: 1px solid gray;
+}
