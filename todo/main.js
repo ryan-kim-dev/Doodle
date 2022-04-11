@@ -1,16 +1,3 @@
-// const $form = document.querySelector('#todo-form');
-// console.log($form);
-
-// const items = document.querySelectorAll('.item');
-// items.forEach((tag) => {
-//   console.log(tag);
-// });
-// console.log(items);
-
-// todos.lastElementChild.remove();
-// todos.firstElementChild.textContent = '글씨 바꿨다!';
-// todos.lastElementChild.innerHTML = '<h1>태그도 바꿀 수 있다!</h1>';
-
 const $button = document.querySelector('.submit');
 const todos = document.querySelector('#todo-list');
 const todoInput = document.querySelector('#todo-input');
