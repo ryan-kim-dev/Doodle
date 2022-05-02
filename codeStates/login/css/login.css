@@ -1,13 +1,8 @@
-@font-face {
-  font-family: 'LeagueSpartan-Bold';
-  src: url(../fonts/LeagueSpartan-Bold.otf);
-}
 * {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
 .logo a {
-  font-family: 'LeagueSpartan-Bold';
   font-size: 16px;
   text-decoration: none;
   color: black;
