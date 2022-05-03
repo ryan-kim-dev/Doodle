@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: column;
+}
+
+.w10 {
+  width: 10%;
+  border: 1px solid green;
+}
+
+.w20 {
+  width: 20%;
+}
+
+.h40 {
+  height: 40%;
+}
+
+.h20 {
+  height: 20%;
+}
+
+.w70 {
+  width: 70%;
+}
+
+.h80 {
+  height: 80%;
+}
+
+.h20 {
+  height: 20%;
+}
