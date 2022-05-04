@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  /* 바디에서 자식인 컨테이너를 정중앙으로 */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+div button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+/* 전체 컨테이너 */
+.calculator {
+  width: 230px;
+  border-radius: 7px;
+  background-color: cornsilk;
+  /* color: white; */
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.3);
+  /* justify, align 으로 현재 정중앙 */
+}
+
+.calculator__menu--items {
+  /* 아이콘 flex-direction */
+  display: flex;
+  justify-content: flex-start;
+  background-color: #282b30;
+  border-radius: 5px 5px 0px 0px;
+  padding-left: 7px;
+  padding-top: 5px;
+}
+
+button.icon {
+  /* 아이콘 공통 스타일링 */
+  border: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  margin-right: 7px;
+}
+
+.icon.close {
+  background: #fc3c3e;
+}
+
+.icon.min {
+  background: #fdb525;
+}
+
+.icon.max {
+  background: #29c432;
+}
+
+/* 계산결과 스크린영역 */
+.calculator__display--for-advanced {
+  height: 65px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #282b30;
+  padding: 0px 18px 3px 0px;
+}
+/* 버튼영역 */
+.calculator__buttons {
+  /* row정렬 줘야함 */
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  /* row nowrap 기본값 자동적용 */
+}
+
+.button__row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.btn {
+  background-color: #595c60;
+  color: #fff;
+  font-size: 18px;
+  width: 57px;
+  height: 46px;
+  border: 0.3px solid rgba(0, 0, 0, 0.3);
+}
+
+.btn.grey {
+  background-color: #3a3d43;
+}
+
+.btn.operator {
+  background-color: #fd8e0e;
+  font-size: 25px;
+}
+
+.btn.double {
+  width: 114px;
+  height: 46px;
+}
+
+/* #FC3C3E 빨강 
+#FDB525 노랑 
+#29C432 초록 
+
+#282B30 결과창 
+#3A3D43 첫번째 row 회색 
+#595C60 숫자판 
+#FD8E0E 주황
+색상 뽑은겁니다!! */
